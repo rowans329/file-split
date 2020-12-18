@@ -1,7 +1,8 @@
 [package]
 name = "file-split"
 version = "0.1.0"
-authors = ["rowan <stephenson.rowan@icloud.com>"]
+authors = ["Rowan Stephenson <stephenson.rowan@gmail.com>"]
+license = "MIT"
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

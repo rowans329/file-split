@@ -34,12 +34,8 @@ pub fn split(contents: &str, chunk_size: usize, headers: bool) -> FileChunkItera
 
     let header = if headers { Some(lines[0]) } else { None };
 
-    let len = if headers {
-        lines.len() - 1
-    } else {
-        lines.len()
-    };
     let offset = if headers { 1 } else { 0 };
+    let len = lines.len() - offset;
 
     let chunk_count = (len as f32 / chunk_size as f32).ceil() as usize;
     let mut chunks = Vec::with_capacity(chunk_count);
